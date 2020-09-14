@@ -1,10 +1,8 @@
-# Leetcode
-solution in C++
+# Leetcode solutions
+solution wirtten in C++ and python
 
-I start with the 30-day Leetcoding Challenge
-
-So..
+Start it with the 30-day Leetcoding Challenge
 
 
 
-Hello Leetcode : )
+Have fun : )
