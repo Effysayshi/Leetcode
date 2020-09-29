@@ -1,5 +1,6 @@
 #Given two sentences, return an array that has the words that appear in one sentence and not
 #the other and an array with the words in common.
+# ^ A.symmetric_difference(B), & A.intersection(B)
 
 
 class Sulotion:
@@ -21,9 +22,14 @@ class Sulotion:
             else:
                 mismatch.append(word)
         return match,mismatch
+    def match_mismatch(self,str1,str2):
+        sentence1 = set(str1.split())
+        sentence2 = set(str2.split())
+        return list(sentence1 & sentence2),list(sentence1^sentence2)
 
 sentence1 = 'We are really pleased to meet you in our city'
 sentence2 = 'The city was hit by a really heavy storm'
 
 test = Sulotion()
 print(test.match_and_mismatch(sentence1,sentence2))
+print(test.match_mismatch(sentence1,sentence2))
