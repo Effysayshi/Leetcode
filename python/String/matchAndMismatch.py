@@ -1,6 +1,8 @@
 #Given two sentences, return an array that has the words that appear in one sentence and not
 #the other and an array with the words in common.
-# ^ A.symmetric_difference(B), & A.intersection(B)
+# use set() to initialize a set not {}
+# {} is for empty dict
+# ^ A.symmetric_difference(B), & A.intersection(B) | A.union(B)   - A.different(B)
 
 
 class Sulotion:
