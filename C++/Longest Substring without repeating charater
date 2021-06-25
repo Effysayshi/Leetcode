@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        // len to store the result
+        // a as the start pointer, b as the end pointer on the string
+        // substr set to store unique elements
+        int len = 0;
+        int a = 0, b = 0;
+        set<char> substr;
+        
+        while( b < s.size()) 
+        {
+            if ( !substr.count(s[b]) )
+            {
+                substr.insert(s[b]);
+                b++;
+                len = substr.size() > len ? substr.size() : len;
+            } 
+            else 
+            {
+                substr.erase(s[a]);
+                a++;
+            }
+        }
+        return len;
+    }
+};
