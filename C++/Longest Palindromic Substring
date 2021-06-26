@@ -1,0 +1,32 @@
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        int len = 0; // to store the longest length
+        int l, r; // left and right as the boundry of the longest substring
+
+        
+        for(int i = 0; i < s.size(); i++)
+        {
+            for (int j = i; j < s.size(); j++)
+            {
+                if( s[j] == s[i] ) {
+                    if( j - i + 1 > len && checkIfPalindromic(s, i, j)) {
+                        len = j - i + 1;
+                        l = i;
+                        r = j;
+                    }
+                }
+            }
+        }
+        return s.substr(l, len);
+    }
+    
+    bool checkIfPalindromic(string s, int i, int j) {
+        int n = j - i + 1;
+        string sub = s.substr(i, n);
+        for(int k = 0; k < n/2; k++) {
+            if(sub[k] != sub[n-1-k]) return false;
+        }
+        return true;
+    }
+};
