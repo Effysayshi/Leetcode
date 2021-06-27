@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        // to store max area
+        // l and r as two pointer to search the max height from the begin and the end, to gain the max area(find the max height), moving the shorter line will be more beneficial 
+        int res = 0;
+        int l = 0, r = height.size() - 1;
+        
+        
+        while( r > l) {
+            res = max(res, (r - l)*min(height[l], height[r]));
+            if (height[l] > height[r]) r--;
+            else l++;
+        }
+         return res;
+    }
+};
