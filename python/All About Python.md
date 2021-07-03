@@ -4,7 +4,7 @@
   
   ## Index
   
-   - Do the start and stop before the end.
+   - Do it from the start index but stop it before the end.
     
       for example:
       ```
