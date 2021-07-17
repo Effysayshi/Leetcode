@@ -33,6 +33,12 @@
      >>> chr(97)
      'a'
      ```
+   - Counter
+     ```
+     import collections
+     >>> collections.Counter("alphabet")
+     Counter({'a': 2, 'l': 1, 'p': 1, 'h': 1, 'b': 1, 'e': 1, 't': 1})
+     ```
   ## Number
   
    - round() function 四舍五入
