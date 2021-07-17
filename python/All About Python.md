@@ -22,7 +22,7 @@
      >>> eval("200 * 2")
      400
      ```
-   - function ord() and chr() to convert between char and representing unicode
+   - function ord() and chr() to convert between char and representing integer
      ```
      >>> ord("a")
      97
@@ -33,3 +33,11 @@
      >>> chr(97)
      'a'
      ```
+  ## Number
+  
+   - round() function 四舍五入
+     ```
+     >>> round(3.1415926,3)
+     3.142
+     ```
+     
