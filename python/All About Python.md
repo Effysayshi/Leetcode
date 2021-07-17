@@ -12,6 +12,30 @@
       range[0,5]  => 0,1,2,3,4
       del a[2:4] => remove a[2],a[3]
       ```
+      
+  ## List
+   - Remove elements
+     - Remove all items: clear()
+     - Remove an item by index and get its value: pop()
+     - **Remove an item by value: remove()**
+     - Remove items by index or slice: del
+     - Remove items that meet the condition: List comprehensions
+
+   - Slice [start:stop:step] (stop is not inclusive)
+     ```
+     >>> a = "-123"
+     >>> a[::-1] #reverse the list
+     '321-'
+     >>> a[:0:-1]
+     '321'
+     >>> a[2:0:-1]
+     '21'
+     ```
+   
+   - Switch two elements
+     ```
+      s[i], s[j] = s[j], s[i]
+     ```
   
   ## String
   
@@ -47,3 +71,12 @@
      3.142
      ```
      
+   - all() and any () return True/False
+     ```
+     >>> array = [1,2,3,4,5]
+     >>> all(array[i] <= array[i+1] for i in range(len(array) - 1))
+     True
+     >>> array2 = [6,7,5,4,3,2,1]
+     >>> any(array2[i] <= array2[i+1] for i in range(len(array2) - 1))
+     True
+     ```
