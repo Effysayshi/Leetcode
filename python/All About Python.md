@@ -4,7 +4,7 @@
   
   ## Index
   
-   - Do it from the start index but stop it before the end.
+   - start it from the start index but the right index in not included.
     
       for example:
       ```
@@ -12,3 +12,24 @@
       range[0,5]  => 0,1,2,3,4
       del a[2:4] => remove a[2],a[3]
       ```
+  
+  ## String
+  
+   - function eval() calculate the string
+     ```
+     >>> eval("200")
+     200
+     >>> eval("200 * 2")
+     400
+     ```
+   - function ord() and chr() to convert between char and representing unicode
+     ```
+     >>> ord("a")
+     97
+     >>> ord("z") - ord("a")
+     25
+     >>> ord("9")-ord("0")
+     9
+     >>> chr(97)
+     'a'
+     ```
